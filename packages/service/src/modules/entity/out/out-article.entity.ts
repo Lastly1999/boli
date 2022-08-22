@@ -1,14 +1,11 @@
-import { CreateDateColumn, Entity, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, PrimaryColumn } from 'typeorm';
+import { BaseEntity } from '../base.entity';
 
 /**
  * 文章表
  */
 @Entity({ name: 'out_article' })
-export class OutArticleEntity {
-  @PrimaryGeneratedColumn()
-  id: number;
-  @PrimaryColumn({ name: 'article_id' })
+export class OutArticleEntity extends BaseEntity {
+  @Column({ name: 'title' })
   title: string;
-  @CreateDateColumn({ name: 'create_at' })
-  createAt: Date;
 }
