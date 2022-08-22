@@ -1,0 +1,3 @@
+# 定义Monorepo项目项
+packages:
+  - 'packages/**'
