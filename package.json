@@ -1,0 +1,14 @@
+{
+  "type":"module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:client": "pnpm -F client dev",
+    "dev:service": "pnpm -F service start:dev",
+    "debug:service": "pnpm -F service start:debug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
