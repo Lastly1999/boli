@@ -2,6 +2,9 @@ import { Module, Global } from '@nestjs/common';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { OutArticleEntity } from 'src/modules/entity/out/out-article.entity';
+import { OutClassificationEntity } from 'src/modules/entity/out/out-classification.entity';
+import { OutTagEntity } from 'src/modules/entity/out/out-tag.entity';
+import { OutUserEntity } from 'src/modules/entity/out/out-user.entity';
 
 @Global()
 @Module({
@@ -22,7 +25,7 @@ import { OutArticleEntity } from 'src/modules/entity/out/out-article.entity';
         } as TypeOrmModuleOptions),
       inject: [ConfigService],
     }),
-    TypeOrmModule.forFeature([OutArticleEntity]),
+    TypeOrmModule.forFeature([OutArticleEntity, OutClassificationEntity, OutTagEntity, OutUserEntity]),
   ],
   exports: [DatabaseModule],
 })
